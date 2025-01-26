@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="panda_6dof_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="8.75870903212169E-05 0.00150736009052514 0.0725623037258229"
+        rpy="0 0 0" />
+      <mass
+        value="1.15759187717433" />
+      <inertia
+        ixx="0.00181376896780865"
+        ixy="-7.13315396473282E-06"
+        ixz="2.63183509587865E-06"
+        iyy="0.00171406449080882"
+        iyz="4.52934693209047E-05"
+        izz="0.00148766404642883" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="shoulder_link">
+    <inertial>
+      <origin
+        xyz="0.00369200049884484 4.47503886984315E-07 0.0893240910734214"
+        rpy="0 0 0" />
+      <mass
+        value="1.34776207222447" />
+      <inertia
+        ixx="0.00325647899329549"
+        ixy="1.0513890304926E-09"
+        ixz="-0.000444148555931606"
+        iyy="0.00408830347692065"
+        iyz="-1.72527722560026E-09"
+        izz="0.0023944020776749" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/shoulder_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/shoulder_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.153"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulder_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="elbow_link">
+    <inertial>
+      <origin
+        xyz="0.0318950320874335 -0.0152171914620555 0.160011443406796"
+        rpy="0 0 0" />
+      <mass
+        value="2.62837648612431" />
+      <inertia
+        ixx="0.0262542116231467"
+        ixy="-0.00105398826586254"
+        ixz="0.00720331977582331"
+        iyy="0.0295958912757897"
+        iyz="0.0047252453911216"
+        izz="0.0086184077012069" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/elbow_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/elbow_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.115"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_link" />
+    <child
+      link="elbow_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="pitch_link">
+    <inertial>
+      <origin
+        xyz="0.0675692847832061 -0.0438578941006053 0.0791087258629317"
+        rpy="0 0 0" />
+      <mass
+        value="1.38577155730204" />
+      <inertia
+        ixx="0.00588121903401971"
+        ixy="-0.00112624765825146"
+        ixz="-0.00163332838140276"
+        iyy="0.00518959234516093"
+        iyz="-0.00179667351996753"
+        izz="0.00459632724464668" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pitch_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.05322 0.28467"
+      rpy="0 0 0" />
+    <parent
+      link="elbow_link" />
+    <child
+      link="pitch_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="yaw_link">
+    <inertial>
+      <origin
+        xyz="7.47429040257042E-08 -0.0348112445772472 0.0912640629172263"
+        rpy="0 0 0" />
+      <mass
+        value="0.620489684583349" />
+      <inertia
+        ixx="0.00235158832654727"
+        ixy="5.30870148257016E-09"
+        ixz="-1.64681562628258E-08"
+        iyy="0.00211628142570042"
+        iyz="0.000363313170000563"
+        izz="0.000719019011254347" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="yaw_joint"
+    type="continuous">
+    <origin
+      xyz="0.08578 -0.00275 0.16933"
+      rpy="0 0 0" />
+    <parent
+      link="pitch_link" />
+    <child
+      link="yaw_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="roll_link">
+    <inertial>
+      <origin
+        xyz="0.0146644631137905 0.00715303137299469 0.0540524118866944"
+        rpy="0 0 0" />
+      <mass
+        value="0.655130839688019" />
+      <inertia
+        ixx="0.00125574145110672"
+        ixy="5.5348908241212E-05"
+        ixz="-0.000192407901796083"
+        iyy="0.00148378101467563"
+        iyz="0.000222903250572777"
+        izz="0.000746428390101061" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roll_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.13555"
+      rpy="0 0 0" />
+    <parent
+      link="yaw_link" />
+    <child
+      link="roll_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="gripper_link">
+    <inertial>
+      <origin
+        xyz="0.00850700019439747 -2.38524477946811E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0696522534936398" />
+      <inertia
+        ixx="4.99751501028366E-05"
+        ixy="5.08653588635102E-20"
+        ixz="-2.42591507670376E-21"
+        iyy="2.96736019455904E-05"
+        iyz="-2.09264804617632E-13"
+        izz="2.44056519911202E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/gripper_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_joint"
+    type="continuous">
+    <origin
+      xyz="0.071 0 0.077"
+      rpy="0 0 0" />
+    <parent
+      link="roll_link" />
+    <child
+      link="gripper_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="finger_1_link">
+    <inertial>
+      <origin
+        xyz="0.0278580513017142 0.0268529832142789 -3.83365605927111E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.021888300887063" />
+      <inertia
+        ixx="1.40687164746509E-06"
+        ixy="3.26569721981782E-07"
+        ixz="-6.18358814225851E-12"
+        iyy="6.65295676092023E-06"
+        iyz="2.0317168261111E-12"
+        izz="6.61298512743167E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/finger_1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/finger_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="finger_1_joint"
+    type="prismatic">
+    <origin
+      xyz="0.01 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="gripper_link" />
+    <child
+      link="finger_1_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="finger_2_link">
+    <inertial>
+      <origin
+        xyz="0.0278580513017142 0.00564701678572129 0.0100000038336564"
+        rpy="0 0 0" />
+      <mass
+        value="0.021888300887063" />
+      <inertia
+        ixx="1.40687164746508E-06"
+        ixy="-3.26569721981793E-07"
+        ixz="6.18358813938686E-12"
+        iyy="6.65295676092022E-06"
+        iyz="2.03171683002867E-12"
+        izz="6.61298512743167E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/finger_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panda_6dof_urdf/meshes/finger_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="finger_2_joint"
+    type="prismatic">
+    <origin
+      xyz="0.01 -0.0325 -0.01"
+      rpy="0 0 0" />
+    <parent
+      link="gripper_link" />
+    <child
+      link="finger_2_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
