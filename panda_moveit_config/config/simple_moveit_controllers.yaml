@@ -1,0 +1,12 @@
+controller_list:
+  - name: panda_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - shoulder_joint
+      - elbow_joint
+      - pitch_joint
+      - yaw_joint
+      - roll_joint
+      - gripper_joint

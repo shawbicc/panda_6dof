@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: panda_6dof
+    relative_path: urdf/panda_6dof_urdf.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/panda_6dof_urdf.srdf
+  CONFIG:
+    author_name: shawbicc
+    author_email: faiyazsabik99@gmail.com
+    generated_timestamp: 1737971866
